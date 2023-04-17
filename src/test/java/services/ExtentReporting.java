@@ -14,7 +14,6 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
@@ -53,7 +52,7 @@ public class ExtentReporting extends TestListenerAdapter {
         logger = extent.createTest(tr.getName()); // create new entry in th report
         logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED)); // send the passed information to the report with GREEN color highlighted
 
-        String screenshotPath = System.getProperty("user.dir") + "\\screenshots\\" + tr.getName() + ".png";
+        String screenshotPath = System.getProperty("user.dir") + "\\screenshots\\extent-reports-screenshots\\" + tr.getName() + ".png";
 
         File f = new File(screenshotPath);
 

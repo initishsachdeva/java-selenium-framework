@@ -37,7 +37,7 @@ public class LoginPage {
             username.sendKeys(name);
         } catch (Exception e) {
             System.out.println(" Unable to enter the provided username");
-            Assert.fail("Exception in entering the username" + e.getMessage());
+            Assert.fail("Exception in entering the username : " + e.getMessage());
         }
     }
 
@@ -47,7 +47,7 @@ public class LoginPage {
             password.sendKeys(pwd);
         } catch (Exception e) {
             System.out.println(" Unable to enter the provided password");
-            Assert.fail("Exception in entering the password" + e.getMessage());
+            Assert.fail("Exception in entering the password : " + e.getMessage());
         }
     }
 
@@ -56,19 +56,18 @@ public class LoginPage {
             clickLogIn.click();
         } catch (Exception e) {
             System.out.println(" Unable to click on login button");
-            Assert.fail("Exception in clicking the loginBtn" + e.getMessage());
+            Assert.fail("Exception in clicking the loginBtn : " + e.getMessage());
         }
     }
 
     public void correctScreenAfterLogin(String expectedText) {
         try {
             String text = correctScreen.getText();
-            System.out.println("Text showing on inventory page" + text);
+            System.out.println("Text showing on inventory page " + text);
             Assert.assertEquals(text, expectedText);
         } catch (Exception e) {
             System.out.println(" Unable to navigate to correct screen");
-            Assert.fail("Exception in navigating to correct screen" + e.getMessage());
+            Assert.fail("Exception in navigating to correct screen : " + e.getMessage());
         }
     }
-
 }
