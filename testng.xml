@@ -2,10 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
 
-    <listeners>
-        <listener class-name="services.ExtentReporting"/>
-    </listeners>
-
     <test verbose="2" preserve-order="true" name="java-selenium-framework">
         <parameter name="browser" value="chrome"/>
         <classes>
