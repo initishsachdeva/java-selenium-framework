@@ -18,7 +18,7 @@ public class LoginTest extends BaseClass {
     @Test
     public void loginTest1() {
         log.info(" ******** " + " executing test -> " + new Exception().getStackTrace()[0].getMethodName() + " ******** ");
-        loginPage.enterUsername("name");
+        loginPage.enterUserName("name");
         log.info("entering username");
         loginPage.enterPaasword("password");
         log.info("entering password");
@@ -34,7 +34,7 @@ public class LoginTest extends BaseClass {
     @Test
     public void loginTest2() {
         log.info(" ******** " + " executing test -> " + new Exception().getStackTrace()[0].getMethodName() + " ******** ");
-        loginPage.enterUsername(username);
+        loginPage.enterUserName(username);
         log.info("entering username");
         loginPage.enterPaasword(password);
         log.info("entering password");
